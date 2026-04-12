@@ -1,6 +1,7 @@
 ---
 name: receiving-code-review
 description: Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
+allowed-tools: Read Grep Glob Bash(git diff *) Bash(git log *) Bash(gh api repos/*/pulls/*/comments/*/replies *)
 ---
 
 # Code Review Reception
@@ -203,6 +204,17 @@ You understand 1,2,3,6. Unclear on 4,5.
 ## GitHub Thread Replies
 
 When replying to inline review comments on GitHub, reply in the comment thread (`gh api repos/{owner}/{repo}/pulls/{pr}/comments/{id}/replies`), not as a top-level PR comment.
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Grep**, **Glob** — examine code and verify reviewer claims
+- **Bash**: `git diff`, `git log` — understand change context
+- **Bash**: `gh api repos/{owner}/{repo}/pulls/{pr}/comments/{id}/replies` — reply to inline review comments
+- **Edit** — apply review fixes (will prompt for permission)
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## The Bottom Line
 

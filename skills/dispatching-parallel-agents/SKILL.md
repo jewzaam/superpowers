@@ -1,6 +1,7 @@
 ---
 name: dispatching-parallel-agents
 description: Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
+allowed-tools: Read Glob Grep
 ---
 
 # Dispatching Parallel Agents
@@ -171,6 +172,16 @@ After agents return:
 2. **Check for conflicts** - Did agents edit same code?
 3. **Run full suite** - Verify all fixes work together
 4. **Spot check** - Agents can make systematic errors
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Glob**, **Grep** — gather context for agent prompts
+
+Subagents handle their own tool usage. This skill is coordination — keep your tool footprint minimal.
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## Real-World Impact
 

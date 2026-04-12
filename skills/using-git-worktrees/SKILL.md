@@ -1,6 +1,7 @@
 ---
 name: using-git-worktrees
 description: Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verification
+allowed-tools: Read Bash(git worktree add *) Bash(git worktree list) Bash(git worktree remove *) Bash(git rev-parse *) Bash(git check-ignore *) Bash(git branch *) Bash(ls *)
 ---
 
 # Using Git Worktrees
@@ -205,6 +206,17 @@ Ready to implement auth feature
 - Verify directory is ignored for project-local
 - Auto-detect and run project setup
 - Verify clean test baseline
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read** — check CLAUDE.md for directory preferences
+- **Bash**: `git worktree add`, `git worktree list`, `git worktree remove` — manage worktrees
+- **Bash**: `git rev-parse`, `git check-ignore`, `git branch` — verify repo state and safety
+- **Bash**: `ls` — check directory existence
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## Integration
 

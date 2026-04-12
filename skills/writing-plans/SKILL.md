@@ -1,6 +1,7 @@
 ---
 name: writing-plans
 description: Use when you have a spec or requirements for a multi-step task, before touching code
+allowed-tools: Read Glob Grep
 ---
 
 # Writing Plans
@@ -131,22 +132,20 @@ After writing the complete plan, look at the spec with fresh eyes and check the 
 
 If you find issues, fix them inline. No need to re-review — just fix and move on. If you find a spec requirement with no task, add the task.
 
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Glob**, **Grep** — explore spec, codebase context, existing patterns
+- **Write** — save plan document (will prompt for permission, which is expected for this artifact)
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
+
 ## Execution Handoff
 
-After saving the plan, offer execution choice:
+After saving the plan, select the execution approach automatically:
 
-**"Plan complete and saved to `docs/superpowers/plans/<filename>.md`. Two execution options:**
+- **Plans with 3+ independent tasks** → **REQUIRED SUB-SKILL:** superpowers:subagent-driven-development (parallel, fresh subagent per task)
+- **Plans with sequential/dependent tasks or fewer than 3 tasks** → **REQUIRED SUB-SKILL:** superpowers:executing-plans (inline, batch execution with checkpoints)
 
-**1. Subagent-Driven (recommended)** - I dispatch a fresh subagent per task, review between tasks, fast iteration
-
-**2. Inline Execution** - Execute tasks in this session using executing-plans, batch execution with checkpoints
-
-**Which approach?"**
-
-**If Subagent-Driven chosen:**
-- **REQUIRED SUB-SKILL:** Use superpowers:subagent-driven-development
-- Fresh subagent per task + two-stage review
-
-**If Inline Execution chosen:**
-- **REQUIRED SUB-SKILL:** Use superpowers:executing-plans
-- Batch execution with checkpoints for review
+Announce which approach you chose and why, then proceed immediately. Do not ask the user to choose.

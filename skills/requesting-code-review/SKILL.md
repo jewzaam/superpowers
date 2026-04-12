@@ -1,6 +1,7 @@
 ---
 name: requesting-code-review
 description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+allowed-tools: Read Grep Glob Bash(git rev-parse *) Bash(git log *) Bash(git diff *)
 ---
 
 # Requesting Code Review
@@ -73,6 +74,15 @@ HEAD_SHA=$(git rev-parse HEAD)
 You: [Fix progress indicators]
 [Continue to Task 3]
 ```
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Grep**, **Glob** — gather context for the reviewer
+- **Bash**: `git rev-parse`, `git log`, `git diff` — identify commits and changes to review
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## Integration with Workflows
 

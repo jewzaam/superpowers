@@ -1,6 +1,7 @@
 ---
 name: subagent-driven-development
 description: Use when executing implementation plans with independent tasks in the current session
+allowed-tools: Read Glob Grep Bash(git status *) Bash(git log *) Bash(git diff *)
 ---
 
 # Subagent-Driven Development
@@ -261,6 +262,17 @@ Done!
 **If subagent fails task:**
 - Dispatch fix subagent with specific instructions
 - Don't try to fix manually (context pollution)
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Glob**, **Grep** — read plan, review subagent output
+- **Bash**: `git status`, `git log`, `git diff` — verify subagent work between tasks
+
+Subagents handle their own tool usage. This skill is coordination — keep your tool footprint minimal.
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## Integration
 

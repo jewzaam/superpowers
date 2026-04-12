@@ -1,6 +1,7 @@
 ---
 name: verification-before-completion
 description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
+allowed-tools: Read Grep Bash(git status *) Bash(git diff *) Bash(git log *)
 ---
 
 # Verification Before Completion
@@ -129,6 +130,16 @@ From 24 failure memories:
 - Paraphrases and synonyms
 - Implications of success
 - ANY communication suggesting completion/correctness
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Grep** — verify file contents and search for issues
+- **Bash**: `git status`, `git diff`, `git log` — confirm state matches claims
+- **Bash**: project test/build/lint commands — run verification
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## The Bottom Line
 

@@ -1,6 +1,7 @@
 ---
 name: executing-plans
 description: Use when you have a written implementation plan to execute in a separate session with review checkpoints
+allowed-tools: Read Glob Grep Bash(git status *) Bash(git diff *) Bash(git log *) Bash(git add *) Bash(git commit *)
 ---
 
 # Executing Plans
@@ -61,6 +62,18 @@ After all tasks complete and verified:
 - Reference skills when plan says to
 - Stop when blocked, don't guess
 - Never start implementation on main/master branch without explicit user consent
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Glob**, **Grep** — explore codebase and plan file
+- **Edit**, **Write** — modify and create implementation files (will prompt for permission)
+- **Bash**: `git status`, `git diff`, `git log` — check state
+- **Bash**: `git add`, `git commit` — commit completed work
+- **Bash**: project test commands — verify implementation
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## Integration
 

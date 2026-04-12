@@ -1,6 +1,7 @@
 ---
 name: test-driven-development
 description: Use when implementing any feature or bugfix, before writing implementation code
+allowed-tools: Read Glob Grep Bash(git diff *) Bash(git status *)
 ---
 
 # Test-Driven Development (TDD)
@@ -323,6 +324,17 @@ PASS
 
 **REFACTOR**
 Extract validation for multiple fields if needed.
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Glob**, **Grep** — explore codebase, find test patterns
+- **Edit**, **Write** — create test files and implementation code (will prompt for permission)
+- **Bash**: `git diff`, `git status` — check state
+- **Bash**: project test commands (e.g., `pytest`, `npm test`, `cargo test`) — run the red-green cycle
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## Verification Checklist
 

@@ -1,6 +1,7 @@
 ---
 name: systematic-debugging
 description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+allowed-tools: Read Glob Grep Bash(git diff *) Bash(git log *) Bash(git status *)
 ---
 
 # Systematic Debugging
@@ -274,6 +275,17 @@ If systematic investigation reveals issue is truly environmental, timing-depende
 4. Add monitoring/logging for future investigation
 
 **But:** 95% of "no root cause" cases are incomplete investigation.
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Glob**, **Grep** — trace code paths and investigate root cause
+- **Bash**: `git diff`, `git log`, `git status` — check recent changes that may have introduced the bug
+- **Edit** — add diagnostic instrumentation or apply fixes (will prompt for permission)
+- **Bash**: project test commands — verify hypotheses and confirm fixes
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## Supporting Techniques
 

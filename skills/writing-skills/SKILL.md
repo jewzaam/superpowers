@@ -1,6 +1,7 @@
 ---
 name: writing-skills
 description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+allowed-tools: Read Glob Grep Bash(git status *) Bash(wc *)
 ---
 
 # Writing Skills
@@ -643,6 +644,17 @@ How future Claude finds your skill:
 6. **Loads example** (only when implementing)
 
 **Optimize for this flow** - put searchable terms early and often.
+
+## Preferred Tools
+
+Use these tools to complete this skill's work. Deviating from this set may trigger permission prompts, which slow execution and degrade the experience. Stick to these unless you have no alternative:
+
+- **Read**, **Glob**, **Grep** — explore existing skills and patterns
+- **Edit**, **Write** — create and modify skill files (will prompt for permission)
+- **Bash**: `git status` — check state
+- **Bash**: `wc` — verify word counts
+
+If you need a tool not on this list, proceed — but understand it may require user approval.
 
 ## The Bottom Line
 
